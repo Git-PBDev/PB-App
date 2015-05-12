@@ -1,0 +1,45 @@
+{
+  "ProjectName": "Perfectly Basics App",
+  "ProjectGuid": "12f5640a-5bec-4c1b-935f-1a0056bda143",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.PerfectlyBasicsApp",
+  "DisplayName": "Perfectly Basics App",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{feabae26-a62e-4c18-b31d-2114dd351b19}",
+  "WP8ProductID": "{9323f032-bec6-4f2d-8ae1-28415cd0eb12}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.PerfectlyBasicsApp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
