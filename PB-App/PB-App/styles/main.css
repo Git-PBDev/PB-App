@@ -1,0 +1,21 @@
+.km-drawer-button:before,
+.km-drawer-button:after {
+    content: "\e0ab";
+    font-size: 32px;
+    margin: -7px 20px 10px -10px;
+}
+
+.km-android .km-view:not(.km-splitview) {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+}
+
+.logout-button{
+  display:none;
+}
+
+.content
+{
+  width:100%;
+  height:100%;
+}
