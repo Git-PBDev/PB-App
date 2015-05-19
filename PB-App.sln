@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A81B4A23-AF18-4B01-8944-84D6FB3D4B47}") = "PB-App", "PB-App\PB-App.iceproj", "{F0A3A518-3D81-4FA3-B12B-BFA552050F2E}"
+Project("{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}") = "PB-App", "Resource\PB-App.iceproj", "{F0A3A518-3D81-4FA3-B12B-BFA552050F2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
