@@ -4,7 +4,7 @@
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.PerfectlyBasicsApp",
   "DisplayName": "Perfectly Basics App",
-  "Author": "",
+  "Author": "Perfectly Basics",
   "Description": "Perfectly Basics App",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -21,8 +21,7 @@
     "android.permission.INTERNET"
   ],
   "DeviceOrientations": [
-    "Portrait",
-    "Landscape"
+    "Portrait"
   ],
   "AndroidHardwareAcceleration": "False",
   "iOSStatusBarStyle": "Default",
