@@ -1,17 +1,17 @@
 .km-drawer-button:before,
 .km-drawer-button:after {
   content: "\e0f1";
-  font-size: 28px;
-  font-weight: lighter;
+  font-size: 35px;
+  font-weight: bolder;
   margin: -7px 20px 10px -10px;
 }
 
 .km-back-button:before,
 .km-back-button:after {
   content: "\e013";
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bolder;
-  margin: -10px 20px 10px -10px;
+  margin: -15px 20px 10px -8px;
 }
 
 .km-android .km-view:not(.km-splitview) {
