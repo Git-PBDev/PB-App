@@ -1,17 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title></title>
   <meta charset="utf-8" />
   <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
   <link href="styles/main.css" rel="stylesheet" />
-
   <script src="cordova.js"></script>
   <script src="kendo/js/jquery.min.js"></script>
   <script src="kendo/js/kendo.mobile.min.js"></script>
-
   <script src="scripts/app.js"></script>
-
 </head>
 <body>
 
@@ -19,12 +16,23 @@
     <div data-role="header">
       <div data-role="navbar">
         <span data-role="view-title"></span>
+       
         <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
       </div>
     </div>
 
     <!-- application views will be rendered here -->
 
+  </div>
+
+  <div data-role="layout" data-id="seperateView">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        <a data-role="backbutton" data-align="left" data-icon="back-button"></a>
+      </div>
+    </div>
   </div>
 
   <!-- application drawer and contents -->
