@@ -35,9 +35,6 @@
     //  RequestedLanguageCode2Chars = RequestedLanguageCode2Chars.toUpperCase();
     //} catch (e) { }
 
-    // hide the splash screen as soon as the app is ready. otherwise
-    // Cordova will wait 5 very long seconds to do it for you.
-    navigator.splashscreen.hide();
 
     app = new kendo.mobile.Application(document.body, {
       // the application needs to know which view to load first
@@ -45,43 +42,35 @@
       skin: "default"
     });
   }, false);
-
-
-  // FUNCTION TO LISTEN
-  function receiveMessage(evt) {
-    // alert(evt.data);
-    // alert(evt.origin);
-
-    var message = String(evt.data);
-    var function_name = message.split('|')[0];
-    var function_value = message.split('|')[1];
-    alert(function_value);
-    switch (function_name) {
-      case 'iframe_height':
-        try {
-          $('.contentIframe').height = function_value + "px";
-        } catch (e) { }
-        break;
-        //case 'open_fancybox':
-        //  if (function_value.indexOf('.jpg') >= 0 || function_value.indexOf('.png') >= 0) {
-        //    open_fancybox_image(function_value);
-        //  } else {
-        //    open_fancybox_iframe(function_value);
-        //  }
-
-        //  break;
-    } // end switch
-  } // end fnc
-
-  function showSpinner() {
-    window.plugins.spinnerDialog.show();
-  }
-
-  function hideSpinner() {
-    window.plugins.spinnerDialog.hide();
-  }
-
-  // LISTENER
-  window.addEventListener('message', receiveMessage, false);
-
 }());
+
+
+
+// FUNCTION TO LISTEN
+function receiveMessage(evt) {
+  // alert(evt.data);
+  // alert(evt.origin);
+
+  var message = String(evt.data);
+  var function_name = message.split('|')[0];
+  var function_value = message.split('|')[1];
+  alert(function_value);
+  switch (function_name) {
+    case 'iframe_height':
+      try {
+        $('.contentIframe').height = function_value + "px";
+      } catch (e) { }
+      break;
+      //case 'open_fancybox':
+      //  if (function_value.indexOf('.jpg') >= 0 || function_value.indexOf('.png') >= 0) {
+      //    open_fancybox_image(function_value);
+      //  } else {
+      //    open_fancybox_iframe(function_value);
+      //  }
+
+      //  break;
+  } // end switch
+} // end fnc
+
+// LISTENER
+window.addEventListener('message', receiveMessage, false);
