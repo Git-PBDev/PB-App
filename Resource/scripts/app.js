@@ -54,7 +54,7 @@ function receiveMessage(evt) {
   var message = String(evt.data);
   var function_name = message.split('|')[0];
   var function_value = message.split('|')[1];
-  alert(function_value);
+  //alert(function_value);
   switch (function_name) {
     case 'iframe_height':
       try {

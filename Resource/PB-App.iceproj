@@ -65,6 +65,8 @@
     <Content Include="scripts\app.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="scripts\spin.js" />
+    <Content Include="scripts\spinner.js" />
     <Content Include="styles\main.css">
       <SubType>Content</SubType>
     </Content>

@@ -11,9 +11,17 @@
       height: screen.height - 47 + 'px',
       width: '100%',
       src: 'https://m.perfectlybasics.nl/beauty.aspx',
-      frameborder: '0'
+      frameborder: '0',
+      onload: 'iframeLoaded();'
     });
-      
-    e.view.element.find('.km-native-scroller').find('div').append(iframe);
+
+    var html = $('.iframeContent');
+    html.append(iframe);
+    html.spin('small');
   }
+
+  function iframeLoaded() {
+    $('.iframeContent').spin(false);
+  }
+
 </script>
