@@ -1,21 +1,29 @@
 .km-drawer-button:before,
 .km-drawer-button:after {
-    content: "\e0ab";
-    font-size: 32px;
-    margin: -7px 20px 10px -10px;
+  content: "\e0f1";
+  font-size: 28px;
+  font-weight: lighter;
+  margin: -7px 20px 10px -10px;
+}
+
+.km-back-button:before,
+.km-back-button:after {
+  content: "\e013";
+  font-size: 28px;
+  font-weight: bolder;
+  margin: -10px 20px 10px -10px;
 }
 
 .km-android .km-view:not(.km-splitview) {
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
 }
 
-.logout-button{
-  display:none;
+.logout-button {
+  display: none;
 }
 
-.content
-{
-  width:100%;
-  height:100%;
+.content {
+  width: 100%;
+  height: 100%;
 }

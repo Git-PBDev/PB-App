@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+  <link href="styles/main.css" rel="stylesheet" />
+  <script src="cordova.js"></script>
+  <script src="kendo/js/jquery.min.js"></script>
+  <script src="kendo/js/kendo.mobile.min.js"></script>
+  <script src="scripts/app.js"></script>
+</head>
+<body>
+
+  <div data-role="layout" data-id="main">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+       
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+      </div>
+    </div>
+
+    <!-- application views will be rendered here -->
+
+  </div>
+
+  <div data-role="layout" data-id="seperateView">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        <a data-role="backbutton" data-align="left" data-icon="back-button"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- application drawer and contents -->
+  <div data-role="drawer" id="appDrawer" style="width: 270px">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+      </div>
+    </div>
+    <ul data-role="listview" data-type="group">
+      <li>
+        <ul id="ulNavigation">
+          <li>
+            <a href="views/home.html" data-icon="home">
+              <label id="lblHome">HOME</label>
+            </a>
+          </li>
+
+          <li>
+            <a id="linkNew" href="views/new.html">
+              <label id="lblNiew">Nieuw in de shop</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkDesigners" href="views/designers.html">
+              <label id="lblDesigners">Designers</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkKleding" href="views/kleding.html">
+              <label id="lblKleding">Kleding</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkSchoenen" href="views/schoenen.html">
+              <label id="lblSchoenen">Schoenen & Tassen</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkAccessoires" href="views/accessoires.html">
+              <label id="lblAccessoires">Accessoires</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkLingerie" href="views/lingerie.html">
+              <label id="lblLingerie">Lingerie</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkBeauty" href="views/beauty.html">
+              <label id="lblBeauty">Beauty</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkInspiratie" href="views/inspiratie.html">
+              <label id="lblInspiratie">Inspiratie</label>
+            </a>
+          </li>
+          <li>
+            <a id="linkSale" href="views/sale.html">
+              <label id="lblSale">Sale</label>
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="views/account.html" data-icon="settings">
+              <label id="lblAccount">ACCOUNT</label>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
