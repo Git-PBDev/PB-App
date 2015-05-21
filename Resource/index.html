@@ -49,65 +49,97 @@
         <ul id="ulNavigation">
           <li>
             <a href="views/home.html" data-icon="home">
-              <label id="lblHome">HOME</label>
+              <label id="lblHome"></label>
             </a>
           </li>
 
           <li>
             <a id="linkNew" href="views/new.html">
-              <label id="lblNiew">Nieuw in de shop</label>
+              <label id="lblNiew"></label>
             </a>
           </li>
           <li>
             <a id="linkDesigners" href="views/designers.html">
-              <label id="lblDesigners">Designers</label>
+              <label id="lblDesigners"></label>
             </a>
           </li>
           <li>
             <a id="linkKleding" href="views/kleding.html">
-              <label id="lblKleding">Kleding</label>
+              <label id="lblKleding"></label>
             </a>
           </li>
           <li>
             <a id="linkSchoenen" href="views/schoenen.html">
-              <label id="lblSchoenen">Schoenen & Tassen</label>
+              <label id="lblSchoenen"></label>
             </a>
           </li>
           <li>
             <a id="linkAccessoires" href="views/accessoires.html">
-              <label id="lblAccessoires">Accessoires</label>
+              <label id="lblAccessoires"></label>
             </a>
           </li>
           <li>
             <a id="linkLingerie" href="views/lingerie.html">
-              <label id="lblLingerie">Lingerie</label>
+              <label id="lblLingerie"></label>
             </a>
           </li>
           <li>
             <a id="linkBeauty" href="views/beauty.html">
-              <label id="lblBeauty">Beauty</label>
+              <label id="lblBeauty"></label>
             </a>
           </li>
           <li>
             <a id="linkInspiratie" href="views/inspiratie.html">
-              <label id="lblInspiratie">Inspiratie</label>
+              <label id="lblInspiratie"></label>
             </a>
           </li>
           <li>
             <a id="linkSale" href="views/sale.html">
-              <label id="lblSale">Sale</label>
+              <label id="lblSale"></label>
             </a>
           </li>
           <li></li>
           <li>
             <a href="views/account.html" data-icon="settings">
-              <label id="lblAccount">ACCOUNT</label>
+              <label id="lblAccount"></label>
+            </a>
+          </li>
+          <li>
+          </li>
+          <li>
+            <a data-role="button" onclick="changeLanguage(1);" data-rel="">
+              <label id="lblLanguageNL"></label>
+            </a>
+          </li>
+          <li>
+            <a data-role="button" onclick="changeLanguage(2);">
+              <label id="lblLanguageEN"></label>
             </a>
           </li>
         </ul>
       </li>
     </ul>
   </div>
+  <script type="text/javascript">
+    $('#lblHome').text((window.RequestedLanguage == 1) ? 'HOME' : 'HOME');
+    $('#lblNiew').text(window.newMenuTitle);
+    $('#lblDesigners').text(window.designersMenuTitle);
+    $('#lblKleding').text(window.kledingMenuTitle);
+    $('#lblSchoenen').text(window.schoenenMenuTitle);
+    $('#lblAccessoires').text(window.accessoiresMenuTitle);
+    $('#lblLingerie').text(window.lingerieMenuTitle);
+    $('#lblBeauty').text(window.beautyMenuTitle);
+    $('#lblSale').text(window.saleMenuTitle);
+    $('#lblInspiratie').text(window.inspiratieMenuTitle);
+    $('#lblAccount').text(window.accountMenuTitle);
+    $('#lblLanguageEN').text((window.RequestedLanguage == 1) ? 'Verander taalkeuze Engels' : ' English');
+    $('#lblLanguageNL').text((window.RequestedLanguage == 1) ? 'Nederlands' : 'Dutch');
+
+    function changeLanguage(languageSelection) {
+      localStorage.setItem('language', languageSelection);
+      return window.location = 'index.html';
+    }
+  </script>
 </body>
 
 </html>

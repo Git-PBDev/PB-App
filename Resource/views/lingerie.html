@@ -1,4 +1,4 @@
-<div data-role="view" data-layout="seperateView" data-title="Lingerie" data-model="APP.models.lingerie" data-reload="true"
+<div data-role="view" data-layout="seperateView" data-show="changeTitle" data-model="APP.models.lingerie" data-reload="true"
      data-stretch="false" data-use-native-scrolling="true" data-zoom="false" data-after-show="makeIframe">
 
   <div class="iframeContent"></div>
@@ -10,7 +10,7 @@
       id: 'contentIframe',
       height: screen.height - 47 + 'px',
       width: '100%',
-      src: 'https://m.perfectlybasics.nl/lingerie.aspx',
+      src: window.lingerieUrl,
       frameborder: '0',
       onload: 'iframeLoaded();'
     });
@@ -23,5 +23,10 @@
   function iframeLoaded() {
     $('.iframeContent').spin(false);
   }
+
+  function changeTitle() {
+    $('.km-view-title').find('span').text(window.lingerieNavTitle);
+  }
+
 
 </script>
