@@ -99,6 +99,8 @@ function loadLanguageSelection(languageSelection) {
     'https://m.perfectlybasics.nl/inspiratie.aspx?language=1' : 'https://m.perfectlybasics.nl/inspiration.aspx?language=2';
   window.kledingUrl = (window.RequestedLanguage == 1) ?
     'https://m.perfectlybasics.nl/kleding.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
+  window.lingerieUrl = (window.RequestedLanguage == 1) ?
+    'https://m.perfectlybasics.nl/lingerie.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
   window.newUrl = (window.RequestedLanguage == 1) ?
     'https://m.perfectlybasics.nl/dames-nieuw.aspx?language=1' : 'https://m.perfectlybasics.nl/product_list.aspx?language=2&sort=1';
   window.saleUrl = (window.RequestedLanguage == 1) ?

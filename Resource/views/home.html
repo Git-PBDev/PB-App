@@ -2,73 +2,74 @@
   <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
     <tr>
       <td>
-        <a href="new.html">
+        <a id="HomeSaleLink" data-role="listview-link" href="../views/new.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/nieuw.png" style="width: 188px;" />
         </a>
       </td>
       <td>
-        <a href="designers.html">
+        <a id="HomeDesignersLink" data-role="listview-link" href="../views/designers.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/merken.png" style="width: 188px;" />
         </a>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <img src="https://www.perfectlybasics.nl/uploads/Slide/150521-mktstudio-mobiel-NL.jpg" style="width: 387px;" />
+      <td colspan="2" id="HomeCarouselLink">
+        <div id="owl-carousel" class="owl-carousel">
+        </div>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="kleding.html">
+        <a id="HomeKledingLink" data-role="listview-link" href="../views/kleding.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="schoenen.html">
+        <a id="HomeSchoenenLink" data-role="listview-link" href="../views/schoenen.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="schoenen.html">
+        <a id="HomeTassenLink" data-role="listview-link" href="../views/schoenen.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="accessoires.html">
+        <a id="HomeAccessoiresLink" data-role="listview-link" href="../views/accessoires.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="lingerie.html">
+        <a id="HomeLingerieLink" data-role="listview-link" href="../views/lingerie.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="beauty.html">
+        <a id="HomeBeautyLink" data-role="listview-link" href="../views/beauty.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a href="inspiratie.html">
+        <a id="HomeInspiratieLink" data-role="listview-link" href="../views/inspiratie.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-nl.png" style="width: 387px;" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a onclick="goToView('sale');">
+        <a id="HomeSaleLink" data-role="listview-link" href="../views/sale.html">
           <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-sale-nl.png" style="width: 387px;" />
         </a>
       </td>
@@ -94,4 +95,15 @@
   function goToView(view) {
     window.open('views/sale.html', '_blank');
   }
+  $(document).ready(function () {
+
+    // INIT SLIDE CAROUSEL
+    $(".owl-carousel").owlCarousel({
+      margin: 10,
+      dots: true,
+      items: 4,
+      dotsEach: false
+  });
+
+  });
 </script>

@@ -65,6 +65,21 @@
     <Content Include="scripts\app.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="scripts\carousel\owl.carousel.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\carousel\owl.carousel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\carousel\owl.carousel.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\carousel\owl.carousel.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\carousel\owl.theme.default.css">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scripts\spin.js" />
     <Content Include="scripts\spinner.js" />
     <Content Include="styles\main.css">
@@ -172,6 +187,7 @@
     <Folder Include="kendo\typescript\" />
     <Folder Include="Plugins\" />
     <Folder Include="scripts\" />
+    <Folder Include="scripts\carousel\" />
     <Folder Include="styles\" />
     <Folder Include="views\" />
   </ItemGroup>
