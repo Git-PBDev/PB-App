@@ -2,11 +2,11 @@
   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
     <tr>
       <td>
-        <a id="NewLink" data-role="listview-link" href="../views/new.html">
+        <a id="NewLink" data-role="listview-link" href="views/new.html">
         </a>
       </td>
       <td>
-        <a id="DesignersLink" data-role="listview-link" href="../views/designers.html">
+        <a id="DesignersLink" data-role="listview-link" href="views/designers.html">
         </a>
       </td>
     </tr>
@@ -18,49 +18,49 @@
     </tr>
     <tr>
       <td colspan="2">
-        <a id="KledingLink" data-role="listview-link" href="../views/kleding.html">
+        <a id="KledingLink" data-role="listview-link" href="views/kleding.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="SchoenenLink" data-role="listview-link" href="../views/schoenen.html">
+        <a id="SchoenenLink" data-role="listview-link" href="views/schoenen.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="TassenLink" data-role="listview-link" href="../views/schoenen.html">
+        <a id="TassenLink" data-role="listview-link" href="views/schoenen.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="AccessoiresLink" data-role="listview-link" href="../views/accessoires.html">
+        <a id="AccessoiresLink" data-role="listview-link" href="views/accessoires.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="LingerieLink" data-role="listview-link" href="../views/lingerie.html">
+        <a id="LingerieLink" data-role="listview-link" href="views/lingerie.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="BeautyLink" data-role="listview-link" href="../views/beauty.html">
+        <a id="BeautyLink" data-role="listview-link" href="views/beauty.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="InspiratieLink" data-role="listview-link" href="../views/inspiratie.html">
+        <a id="InspiratieLink" data-role="listview-link" href="views/inspiratie.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="SaleLink" data-role="listview-link" href="../views/sale.html">
+        <a id="SaleLink" data-role="listview-link" href="views/sale.html">
         </a>
       </td>
     </tr>
@@ -99,7 +99,6 @@
 
   $(document).ready(function () {
 
-    $('#imgNew').css('width', screen.width * 0.5);
 
     // INIT SLIDE CAROUSEL
     $(".owl-carousel").owlCarousel({
@@ -108,6 +107,12 @@
       items: 4,
       dotsEach: false
     });
+  });
+
+  $(window).on('swipeleft swiperight', $(window), function (event) {
+    alert('werkt dit?');
+    event.stopPropagation();
+    event.preventDefault();
   });
 
 </script>

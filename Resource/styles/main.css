@@ -9,9 +9,9 @@
 .km-back-button:before,
 .km-back-button:after {
   content: "\e013";
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bolder;
-  margin: -15px 20px 10px -8px;
+  margin: -10px 20px 10px -20px;
 }
 
 .km-android .km-view:not(.km-splitview) {
@@ -34,5 +34,9 @@
     color: #fff;
     background-color: #f60;
     font-size: 20px;
-    text-align: center;
+     text-align: center;
+}
+.pbTitel
+{
+  margin-left: 25px;
 }
