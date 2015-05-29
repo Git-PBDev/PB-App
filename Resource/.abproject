@@ -6,7 +6,7 @@
   "DisplayName": "Perfectly Basics App",
   "Author": "Perfectly Basics",
   "Description": "Perfectly Basics App",
-  "BundleVersion": "1.0",
+  "BundleVersion": "0.1",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
