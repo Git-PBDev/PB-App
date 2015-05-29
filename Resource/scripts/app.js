@@ -153,4 +153,56 @@ function loadLanguageSelection(languageSelection) {
   window.newNavTitle = (window.RequestedLanguage == 1) ? 'Nieuw in de shop' : 'New in the shop';
   window.saleNavTitle = (window.RequestedLanguage == 1) ? 'Sale' : 'Sale';
   window.schoenenNavTitle = (window.RequestedLanguage == 1) ? 'Tassen & Schoenen' : 'Bags & Shoes';
+
+  var imgNew;
+  var imgDesigners;
+  var imgKleding;
+  var imgSchoenen;
+  var imgTassen;
+  var imgAccessoires;
+  var imgLingerie;
+  var imgBeauty;
+  var imgInspiratie;
+  var imgSale;
+
+  window.imgNew = (window.RequestedLanguage == 1) ?
+    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/nieuw.png' style='width:"  + screen.width * 0.5 + "px;' />":
+    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/nieuw-EN.png' style='width:" + screen.width * 0.5 + "px;' />";
+
+  window.imgDesigners = (window.RequestedLanguage == 1) ?
+     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/merken.png' style='width:" + screen.width * 0.5 + "px;' />" :
+     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/merken-EN.png' style='width:" + screen.width * 0.5 + "px;' />";
+
+  window.imgKleding = (window.RequestedLanguage == 1) ?
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-nl.png' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-en.png' style='width:" + screen.width + "px;' />";
+
+  window.imgSchoenen = (window.RequestedLanguage == 1) ?
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-nl.png' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-en.png' style='width:" + screen.width + "px;' />";
+
+  window.imgTassen = (window.RequestedLanguage == 1) ?
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-nl.png' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-en.png' style='width:" + screen.width + "px;' />";
+
+   window.imgAccessoires = (window.RequestedLanguage == 1) ?
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-nl.png' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-en.png' style='width:" + screen.width + "px;' />";
+
+   window.imgLingerie = (window.RequestedLanguage == 1) ?
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-nl.png' style='width:" + screen.width + "px;' />" :
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-en.png' style='width:" + screen.width + "px;' />";
+
+   window.imgBeauty = (window.RequestedLanguage == 1) ?
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-nl.png' style='width:" + screen.width + "px;' />" :
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-en.png' style='width:" + screen.width + "px;' />";
+
+   window.imgInspiratie = (window.RequestedLanguage == 1) ?
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-nl.png' style='width:" + screen.width + "px;' />" :
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-en.png' style='width:" + screen.width + "px;' />";
+
+   window.imgSale = (window.RequestedLanguage == 1) ?
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-sale-nl.png' style='width:" + screen.width + "px;' />" :
+   "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-sale-en.png' style='width:" + screen.width + "px;' />";
+
 }

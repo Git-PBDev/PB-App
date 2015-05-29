@@ -28,6 +28,84 @@
     <Content Include="cordova.android.js" />
     <Content Include="cordova.ios.js" />
     <Content Include="cordova.wp8.js" />
+    <Content Include="img\Icons\pb-icon-100x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-114x114.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-120x120.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-144x144.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-152x152.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-180x180.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-29x29.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-50x50.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-57x57.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-58x58.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-60x60.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-72x72.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-76x76.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\pb-icon-80x80.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-1024x748.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-1242x2208.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-1334x750.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-1536x2008.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-2048x1496.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-2208x1242.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-320x480.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-640x1136.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-640x960.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-750x1334.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="img\Icons\splashscreen-768x1004.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="index.html" />
     <Content Include="kendo\js\jquery.min.js">
       <SubType>Content</SubType>
@@ -179,6 +257,7 @@
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
     <Folder Include="css\" />
     <Folder Include="img\" />
+    <Folder Include="img\Icons\" />
     <Folder Include="js\" />
     <Folder Include="kendo\" />
     <Folder Include="kendo\js\" />

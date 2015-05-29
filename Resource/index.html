@@ -109,17 +109,15 @@
           </li>
           <li>
           </li>
-          <li>
-            <a data-role="button" onclick="changeLanguage(1);" data-rel="">
+          <li align="center">
+            <a  id="langNLButton"class="button selected-button" data-role="button" onclick="changeLanguage(1);">
               <label id="lblLanguageNL"></label>
             </a>
-          </li>
-          <li>
-            <a data-role="button" onclick="changeLanguage(2);">
+            <a id="langENButton"class="button selected-button" data-role="button" onclick="changeLanguage(2);">
               <label id="lblLanguageEN"></label>
             </a>
-          </li>
-        </ul>
+          </li>  
+          </ul>
       </li>
     </ul>
   </div>
@@ -135,9 +133,17 @@
     $('#lblSale').text(window.saleMenuTitle);
     $('#lblInspiratie').text(window.inspiratieMenuTitle);
     $('#lblAccount').text(window.accountMenuTitle);
-    $('#lblLanguageEN').text((window.RequestedLanguage == 1) ? 'Verander taalkeuze Engels' : ' English');
+    $('#lblLanguageEN').text((window.RequestedLanguage == 1) ? 'Engels' : ' English');
     $('#lblLanguageNL').text((window.RequestedLanguage == 1) ? 'Nederlands' : 'Dutch');
 
+    if (window.RequestedLanguage == 1) {
+      $('#langENButton').show();
+      $('#langNLButton').hide();
+    }
+    else {
+      $('#langENButton').hide();
+      $('#langNLButton').show();
+    }
     function changeLanguage(languageSelection) {
       localStorage.setItem('language', languageSelection);
       return window.location = 'index.html';

@@ -27,3 +27,12 @@
   width: 100%;
   height: 100%;
 }
+
+.km-root .selected-button.km-button,
+.km-root .km-wp-light .selected-button.km-button
+{
+    color: #fff;
+    background-color: #f60;
+    font-size: 20px;
+    text-align: center;
+}

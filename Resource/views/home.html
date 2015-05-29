@@ -2,13 +2,11 @@
   <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
     <tr>
       <td>
-        <a id="HomeSaleLink" data-role="listview-link" href="../views/new.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/nieuw.png" style="width: 188px;" />
+        <a id="NewLink" data-role="listview-link" href="../views/new.html">
         </a>
       </td>
       <td>
-        <a id="HomeDesignersLink" data-role="listview-link" href="../views/designers.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/merken.png" style="width: 188px;" />
+        <a id="DesignersLink" data-role="listview-link" href="../views/designers.html">
         </a>
       </td>
     </tr>
@@ -20,57 +18,49 @@
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeKledingLink" data-role="listview-link" href="../views/kleding.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-nl.png" style="width: 387px;" />
+        <a id="KledingLink" data-role="listview-link" href="../views/kleding.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeSchoenenLink" data-role="listview-link" href="../views/schoenen.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-nl.png" style="width: 387px;" />
+        <a id="SchoenenLink" data-role="listview-link" href="../views/schoenen.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeTassenLink" data-role="listview-link" href="../views/schoenen.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-nl.png" style="width: 387px;" />
+        <a id="TassenLink" data-role="listview-link" href="../views/schoenen.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeAccessoiresLink" data-role="listview-link" href="../views/accessoires.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-nl.png" style="width: 387px;" />
+        <a id="AccessoiresLink" data-role="listview-link" href="../views/accessoires.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeLingerieLink" data-role="listview-link" href="../views/lingerie.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-nl.png" style="width: 387px;" />
+        <a id="LingerieLink" data-role="listview-link" href="../views/lingerie.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeBeautyLink" data-role="listview-link" href="../views/beauty.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-nl.png" style="width: 387px;" />
+        <a id="BeautyLink" data-role="listview-link" href="../views/beauty.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeInspiratieLink" data-role="listview-link" href="../views/inspiratie.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-nl.png" style="width: 387px;" />
+        <a id="InspiratieLink" data-role="listview-link" href="../views/inspiratie.html">
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <a id="HomeSaleLink" data-role="listview-link" href="../views/sale.html">
-          <img src="https://perfectlybasics.nl/uploads/menu/mobile/app-sale-nl.png" style="width: 387px;" />
+        <a id="SaleLink" data-role="listview-link" href="../views/sale.html">
         </a>
       </td>
     </tr>
@@ -90,11 +80,23 @@
 
     var html = $('.iframeContent');
     html.append(iframe);
+
+
+    //Build imagelinks Home page
+    $('#NewLink').append(window.imgNew);
+    $('#DesignersLink').append(window.imgDesigners);
+    $('#KledingLink').append(window.imgKleding);
+    $('#SchoenenLink').append(window.imgSchoenen);
+    $('#TassenLink').append(window.imgTassen);
+    $('#AccessoiresLink').append(window.imgAccessoires);
+    $('#LingerieLink').append(window.imgLingerie);
+    $('#BeautyLink').append(window.imgBeauty);
+    $('#InspiratieLink').append(window.imgInspiratie);
+    $('#SaleLink').append(window.imgSale);
   }
 
-  function goToView(view) {
-    window.open('views/sale.html', '_blank');
-  }
+
+
   $(document).ready(function () {
 
     // INIT SLIDE CAROUSEL
@@ -103,7 +105,6 @@
       dots: true,
       items: 4,
       dotsEach: false
-  });
-
+    });
   });
 </script>
