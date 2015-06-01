@@ -11,7 +11,7 @@
   content: "\e013";
   font-size: 30px;
   font-weight: bolder;
-  margin: -10px 0 10px -5px;
+  margin: -14px;
 }
 
 .km-android .km-view:not(.km-splitview) {
@@ -34,9 +34,15 @@
     color: #fff;
     background-color: #f60;
     font-size: 20px;
-     text-align: center;
+    text-align: center;
 }
+
 .pbTitel
 {
-  margin-left: 25px;
+  padding-right: 10px;
+  margin-left: 90px;
+}
+
+.km-view-title, .km-dialog-title {
+text-align:left;
 }

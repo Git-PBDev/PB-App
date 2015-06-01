@@ -5,10 +5,14 @@
   // later on so that we can use it if need be
   var app;
 
-  //set default language to NL
   var language = localStorage.getItem('language');
   if (language == null) {
+    //set default language to NL
+
     localStorage.setItem('language', '1')
+  }
+  else {
+
   }
   loadLanguageSelection(localStorage.getItem('language'));
   // create an object to store the models for each view
@@ -26,12 +30,7 @@
   // this function is called by Cordova when the application is loaded by the device
   document.addEventListener('deviceready', function () {
 
-    //// NL | EN
-    //try {
-    //  RequestedLanguageCode2Chars =  'NL';
-    //  RequestedLanguageCode2Chars = RequestedLanguageCode2Chars.toUpperCase();
-    //} catch (e) { }
-
+    //sensitivity touch events and ratio
     kendo.UserEvents.defaultThreshold(20);
     app = new kendo.mobile.Application(document.body, {
       // the application needs to know which view to load first
@@ -58,20 +57,43 @@ function receiveMessage(evt) {
         $('.contentIframe').height = function_value + "px";
       } catch (e) { }
       break;
-      //case 'open_fancybox':
-      //  if (function_value.indexOf('.jpg') >= 0 || function_value.indexOf('.png') >= 0) {
-      //    open_fancybox_image(function_value);
-      //  } else {
-      //    open_fancybox_iframe(function_value);
-      //  }
+    case 'RequestedLanguageCode2Chars':
+      // check eerst welk languageID het is
+      var websiteLanguage;
+      if (function_value == 'NL') {
+        websiteLanguage = 1;
+      }
 
-      //  break;
+      if (function_value == 'EN') {
+        websiteLanguage = 2;
+      }
+
+      var appLanguage = localStorage.getItem('language');
+
+      if (websiteLanguage != null && appLanguage != websiteLanguage) {
+        localStorage.setItem('language', websiteLanguage);
+
+        window.location = 'index.html?view=' + top.window.location.hash;
+        location.reload();
+      }
+      break;
+    case 'returnUrl':
+      try {
+        window.location = 'index.html?view=' + top.window.location.hash + '?returnUrl=' + function_value;
+      } catch (e) { }
+      break;
+
+    case 'metaTitel':
+      window.navTitle = function_value;
+      break;
+
   } // end switch
 } // end fnc
 
 // LISTENER
 window.addEventListener('message', receiveMessage, false);
 var RequestedLanguage;
+
 function loadLanguageSelection(languageSelection) {
   localStorage.setItem('language', languageSelection.toString());
   window.RequestedLanguage = localStorage.getItem('language');
@@ -98,9 +120,11 @@ function loadLanguageSelection(languageSelection) {
   window.inspiratieUrl = (window.RequestedLanguage == 1) ?
     'https://m.perfectlybasics.nl/inspiratie.aspx?language=1' : 'https://m.perfectlybasics.nl/inspiration.aspx?language=2';
   window.kledingUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/kleding.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
+  //  'https://m.perfectlybasics.nl/kleding.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
+    'http://localhost/PerfectlyBasics/Website_Mobile/kleding.aspx' :
+    'http://localhost/PerfectlyBasics/Website_Mobile/clothing.aspx';
   window.lingerieUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/lingerie.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
+     'https://m.perfectlybasics.nl/lingerie.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
   window.newUrl = (window.RequestedLanguage == 1) ?
     'https://m.perfectlybasics.nl/dames-nieuw.aspx?language=1' : 'https://m.perfectlybasics.nl/product_list.aspx?language=2&sort=1';
   window.saleUrl = (window.RequestedLanguage == 1) ?
@@ -131,29 +155,10 @@ function loadLanguageSelection(languageSelection) {
   window.saleMenuTitle = (window.RequestedLanguage == 1) ? 'Sale' : 'Sale';
   window.schoenenMenuTitle = (window.RequestedLanguage == 1) ? 'Tassen & Schoenen' : 'Bags & Shoes';
 
-  //Alle navbar titels
-  var accessoiresNavTitle;
-  var accountNavTitle;
-  var beautyNavTitle;
-  var designersNavTitle;
-  var inspiratieNavTitle;
-  var kledingNavTitle;
-  var lingerieNavTitle;
-  var newNavTitle;
-  var saleNavTitle;
-  var schoenenNavTitle;
+  //navbar title
+  var navTitle;
 
-  window.accessoiresNavTitle = (window.RequestedLanguage == 1) ? 'Accessoires' : 'Accessories';
-  window.accountNavTitle = (window.RequestedLanguage == 1) ? 'Account' : 'Account';
-  window.beautyNavTitle = (window.RequestedLanguage == 1) ? 'Beauty' : 'Beauty';
-  window.designersNavTitle = (window.RequestedLanguage == 1) ? 'Designers' : 'Designers';
-  window.inspiratieNavTitle = (window.RequestedLanguage == 1) ? 'Inspiratie' : 'Inspiration';
-  window.kledingNavTitle = (window.RequestedLanguage == 1) ? 'Kleding' : 'Clothing';
-  window.lingerieNavTitle = (window.RequestedLanguage == 1) ? 'Lingerie' : 'Lingerie';
-  window.newNavTitle = (window.RequestedLanguage == 1) ? 'Nieuw in de shop' : 'New in the shop';
-  window.saleNavTitle = (window.RequestedLanguage == 1) ? 'Sale' : 'Sale';
-  window.schoenenNavTitle = (window.RequestedLanguage == 1) ? 'Tassen & Schoenen' : 'Bags & Shoes';
-
+  //img variable
   var imgNew;
   var imgDesigners;
   var imgKleding;
@@ -166,42 +171,39 @@ function loadLanguageSelection(languageSelection) {
   var imgSale;
 
   window.imgNew = (window.RequestedLanguage == 1) ?
-    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/nieuw.png' style='width:" + screen.width * 0.5 + "px;' />" :
-    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/nieuw-EN.png' style='width:" + screen.width * 0.5 + "px;' />";
+    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-nieuw-nl.jpg' style='width:" + screen.width * 0.5 + "px;' />" :
+    "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-nieuw-en.jpg' style='width:" + screen.width * 0.5 + "px;' />";
 
   window.imgDesigners = (window.RequestedLanguage == 1) ?
-     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/merken.png' style='width:" + screen.width * 0.5 + "px;' />" :
-     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/merken-EN.png' style='width:" + screen.width * 0.5 + "px;' />";
+     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-merken-nl.jpg' style='width:" + screen.width * 0.5 + "px; height: 67px;' />" :
+     "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-merken-EN.jpg' style='width:" + screen.width * 0.5 + "px; height: 67px;' />";
 
   window.imgKleding = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-en.png' style='width:" + screen.width + "px;' />";
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-nl.jpg' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-kleding-en.jpg' style='width:" + screen.width + "px;' />";
 
   window.imgSchoenen = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-en.png' style='width:" + screen.width + "px;' />";
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-nl.jpg' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-schoenen-en.jpg' style='width:" + screen.width + "px;' />";
 
   window.imgTassen = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-en.png' style='width:" + screen.width + "px;' />";
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-nl.jpg' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-tassen-en.jpg' style='width:" + screen.width + "px;' />";
 
   window.imgAccessoires = (window.RequestedLanguage == 1) ?
- "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-nl.png' style='width:" + screen.width + "px;' />" :
- "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-en.png' style='width:" + screen.width + "px;' />";
+ "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-nl.jpg' style='width:" + screen.width + "px;' />" :
+ "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-accessoires-en.jpg' style='width:" + screen.width + "px;' />";
 
-  window.imgLingerie = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie-en.png' style='width:" + screen.width + "px;' />";
+  window.imgLingerie =
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-lingerie.jpg' style='width:" + screen.width + "px;' />";
 
-  window.imgBeauty = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-beauty-en.png' style='width:" + screen.width + "px;' />";
+  window.imgBeauty =
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-beauty.jpg' style='width:" + screen.width + "px;' />";
 
   window.imgInspiratie = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-en.png' style='width:" + screen.width + "px;' />";
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-nl.jpg' style='width:" + screen.width + "px;' />" :
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-inspiratie-en.jpg' style='width:" + screen.width + "px;' />";
 
-  window.imgSale = (window.RequestedLanguage == 1) ?
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-sale-nl.png' style='width:" + screen.width + "px;' />" :
-  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-sale-en.png' style='width:" + screen.width + "px;' />";
+  window.imgSale =
+  "<img src='https://perfectlybasics.nl/uploads/menu/mobile/app-sale.jpg' style='width:" + screen.width + "px;' />";
 }

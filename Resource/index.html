@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
   <link href="styles/main.css" rel="stylesheet" />
-  <link href="scripts/carousel/owl.carousel.min.css" rel="stylesheet"/>
-  <link href="scripts/carousel/owl.theme.default.css" rel="stylesheet"/>
+  <link href="scripts/carousel/owl.carousel.min.css" rel="stylesheet" />
+  <link href="scripts/carousel/owl.theme.default.css" rel="stylesheet" />
   <script src="cordova.js"></script>
   <script src="kendo/js/jquery.min.js"></script>
   <script src="kendo/js/kendo.mobile.min.js"></script>
@@ -17,12 +17,12 @@
 </head>
 <body>
 
-  <div data-role="layout" data-id="main">
+  <div data-role="layout" data-id="main" data-show="ShowIndex">
     <div data-role="header">
       <div data-role="navbar">
-        <span data-role="view-title"></span>
-       
-        <a data-role="button" href="#appDrawer" data-rel="drawer"  data-align="left" data-icon="drawer-button"></a>
+        <span class="pbTitel" data-role="view-title" style="text-align: left; height:47px;"></span>
+
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
       </div>
     </div>
 
@@ -33,8 +33,8 @@
   <div data-role="layout" data-id="seperateView">
     <div data-role="header">
       <div data-role="navbar">
-        <span class="pbTitel" data-role=" view-title" style="text-align: right;"></span>
-        <a data-role="button" href="#appDrawer" data-rel="drawer"  data-align="left" data-icon="drawer-button"></a>
+        <span class="pbTitel" data-role=" view-title" style="text-align: left; height:47px;"></span>
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
         <a data-role="backbutton" data-align="left" data-icon="back-button"></a>
       </div>
     </div>
@@ -110,18 +110,33 @@
           <li>
           </li>
           <li>
-            <a  id="langNLButton"class="button selected-button" data-role="button" onclick="changeLanguage(1);">
+            <a id="langNLButton" class="button selected-button" data-role="button" onclick="changeLanguage(1);">
               <label id="lblLanguageNL"></label>
             </a>
-            <a id="langENButton"class="button selected-button" data-role="button" onclick="changeLanguage(2);">
+            <a id="langENButton" class="button selected-button" data-role="button" onclick="changeLanguage(2);">
               <label id="lblLanguageEN"></label>
             </a>
-          </li>  
-          </ul>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
   <script type="text/javascript">
+
+    function ShowIndex(eventview) {
+
+      if (eventview.view.params.view != null || eventview.view.params.returnUrl != null) {
+        var view = 'index.html?';
+        if (eventview.view.params.view != null) {
+          view += eventview.view.params.view;
+        }
+        if (eventview.view.params.returnUrl != null) {
+          view +=  '&' + eventView.view.params.returnUrl
+        }
+        returnToView(view);
+      }
+    }
+
     $('#lblHome').text((window.RequestedLanguage == 1) ? 'HOME' : 'HOME');
     $('#lblNiew').text(window.newMenuTitle);
     $('#lblDesigners').text(window.designersMenuTitle);
@@ -147,6 +162,11 @@
     function changeLanguage(languageSelection) {
       localStorage.setItem('language', languageSelection);
       return window.location = 'index.html';
+    }
+
+    function returnToView(view) {
+      window.location = view;
+      location.reload();
     }
   </script>
 </body>
