@@ -1,4 +1,4 @@
-<div data-role="view" data-layout="seperateView" data-show="changeTitle" data-model="APP.models.schoenen" data-reload="true"
+<div data-role="view" data-layout="seperateView" data-model="APP.models.schoenen" data-reload="true"
      data-stretch="false" data-use-native-scrolling="true" data-zoom="false" data-after-show="makeIframe">
 
   <div class="iframeContent"></div>
@@ -24,8 +24,9 @@
     $('.iframeContent').spin(false);
   }
 
-  function changeTitle() {
-    $('.km-view-title').find('span').text(window.schoenenNavTitle);
-  }
+  setInterval(function () {
+    $('.km-view-title').find('span').text(window.navTitle);
+
+  }, 100);
 
 </script>

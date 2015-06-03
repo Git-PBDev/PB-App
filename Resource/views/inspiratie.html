@@ -1,4 +1,4 @@
-<div data-role="view" data-layout="seperateView" data-show="changeTitle" data-model="APP.models.inspiratie" data-reload="true"
+<div data-role="view" data-layout="seperateView" data-model="APP.models.inspiratie" data-reload="true"
      data-stretch="false" data-use-native-scrolling="true" data-zoom="false" data-after-show="makeIframe">
 
   <div class="iframeContent"></div>
@@ -17,8 +17,9 @@
     e.view.element.find('.km-native-scroller').find('div').append(iframe);
   }
 
-  function changeTitle() {
-    $('.km-view-title').find('span').text(window.inspiratieNavTitle);
-  }
+  setInterval(function () {
+    $('.km-view-title').find('span').text(window.navTitle);
+
+  }, 100);
 
 </script>

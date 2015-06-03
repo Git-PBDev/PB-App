@@ -110,27 +110,35 @@ function loadLanguageSelection(languageSelection) {
   var schoenenUrl;
 
   window.accessoiresUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/accessoires.aspx?language=1' : 'https://m.perfectlybasics.nl/accessories.aspx?language=2';
+    'https://m.perfectlybasics.nl/accessoires.aspx?language=1' :
+    'https://m.perfectlybasics.nl/accessories.aspx?language=2';
   window.accountUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/account_nl.aspx?language=1' : 'https://m.perfectlybasics.nl/account_en.aspx?language=2';
+    'https://m.perfectlybasics.nl/account_nl.aspx?language=1' :
+    'https://m.perfectlybasics.nl/account_en.aspx?language=2';
   window.beautyUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/beauty.aspx?language=1' : 'https://m.perfectlybasics.nl/beauty.aspx?language=2';
+    'https://m.perfectlybasics.nl/beauty.aspx?language=1' :
+    'https://m.perfectlybasics.nl/beauty.aspx?language=2';
   window.designersUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/designers.aspx?language=1' : 'https://m.perfectlybasics.nl/designers.aspx?language=2';
+    'https://m.perfectlybasics.nl/designers.aspx?language=1' :
+    'https://m.perfectlybasics.nl/designers.aspx?language=2';
   window.inspiratieUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/inspiratie.aspx?language=1' : 'https://m.perfectlybasics.nl/inspiration.aspx?language=2';
+    'https://m.perfectlybasics.nl/inspiratie.aspx?language=1' :
+    'https://m.perfectlybasics.nl/inspiration.aspx?language=2';
   window.kledingUrl = (window.RequestedLanguage == 1) ?
-  //  'https://m.perfectlybasics.nl/kleding.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
-    'http://localhost/PerfectlyBasics/Website_Mobile/kleding.aspx' :
-    'http://localhost/PerfectlyBasics/Website_Mobile/clothing.aspx';
+    'https://m.perfectlybasics.nl/kleding.aspx?language=1' :
+    'https://m.perfectlybasics.nl/clothing.aspx?language=2';
   window.lingerieUrl = (window.RequestedLanguage == 1) ?
-     'https://m.perfectlybasics.nl/lingerie.aspx?language=1' : 'https://m.perfectlybasics.nl/clothing.aspx?language=2';
+     'https://m.perfectlybasics.nl/lingerie.aspx?language=1' :
+     'https://m.perfectlybasics.nl/clothing.aspx?language=2';
   window.newUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/dames-nieuw.aspx?language=1' : 'https://m.perfectlybasics.nl/product_list.aspx?language=2&sort=1';
+    'https://m.perfectlybasics.nl/dames-nieuw.aspx?language=1' :
+    'https://m.perfectlybasics.nl/product_list.aspx?language=2&sort=1';
   window.saleUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/sale.aspx?language=1' : 'https://m.perfectlybasics.nl/sale.aspx?language=2';
+    'https://m.perfectlybasics.nl/sale.aspx?language=1' :
+    'https://m.perfectlybasics.nl/sale.aspx?language=2';
   window.schoenenUrl = (window.RequestedLanguage == 1) ?
-    'https://m.perfectlybasics.nl/tassen-schoenen.aspx?language=1' : 'https://m.perfectlybasics.nl/bags-shoes.aspx?language=2';
+    'https://m.perfectlybasics.nl/tassen-schoenen.aspx?language=1' :
+    'https://m.perfectlybasics.nl/bags-shoes.aspx?language=2';
 
   //Alle menu titels
   var accessoiresMenuTitle;
